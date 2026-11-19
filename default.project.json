@@ -1,12 +1,7 @@
 {
-  "name": "house-dodge",
+  "name": "meme-tide-tycoon",
   "tree": {
     "$className": "DataModel",
-    "Players": {
-      "$properties": {
-        "CharacterAutoLoads": false
-      }
-    },
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
@@ -19,41 +14,2634 @@
         }
       }
     },
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
     "Workspace": {
       "$properties": {
         "FilteringEnabled": true
       },
-      "Baseplate": {
+      "IslandBase": {
         "$className": "Part",
         "$properties": {
           "Anchored": true,
           "Color": [
-            0.38823,
-            0.37254,
-            0.38823
+            0.933,
+            0.839,
+            0.569
           ],
-          "Locked": true,
+          "Material": "Sand",
           "Position": [
             0,
-            -10,
+            -1,
             0
           ],
           "Size": [
-            512,
-            20,
-            512
+            220,
+            2,
+            220
           ]
+        }
+      },
+      "LagoonWater": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.118,
+            0.51,
+            0.902
+          ],
+          "Material": "Water",
+          "Transparency": 0.2,
+          "Position": [
+            0,
+            -2.2,
+            0
+          ],
+          "Size": [
+            400,
+            1,
+            400
+          ]
+        }
+      },
+      "LagoonPoolWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.118,
+            0.51,
+            0.902
+          ],
+          "Material": "Water",
+          "Transparency": 0.2,
+          "Position": [
+            -85,
+            0.2,
+            -85
+          ],
+          "Size": [
+            20,
+            1,
+            20
+          ]
+        }
+      },
+      "LagoonPoolEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.118,
+            0.51,
+            0.902
+          ],
+          "Material": "Water",
+          "Transparency": 0.2,
+          "Position": [
+            85,
+            0.2,
+            85
+          ],
+          "Size": [
+            20,
+            1,
+            20
+          ]
+        }
+      },
+      "SpawnPlaza": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.784,
+            0.784,
+            0.784
+          ],
+          "Material": "Slate",
+          "Position": [
+            0,
+            0.5,
+            40
+          ],
+          "Size": [
+            24,
+            1,
+            24
+          ]
+        }
+      },
+      "SpawnLocation": {
+        "$className": "SpawnLocation",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.4,
+            0.9,
+            0.4
+          ],
+          "Neutral": true,
+          "Position": [
+            0,
+            1,
+            40
+          ],
+          "Size": [
+            8,
+            1,
+            8
+          ]
+        }
+      },
+      "ShopPad": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.706,
+            0.471,
+            1
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            0,
+            0.5,
+            55
+          ],
+          "Size": [
+            12,
+            1,
+            12
+          ]
+        }
+      },
+      "ShopCounter": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.75,
+            0.5
+          ],
+          "Material": "Wood",
+          "Position": [
+            0,
+            2,
+            52
+          ],
+          "Size": [
+            6,
+            2,
+            2
+          ]
+        }
+      },
+      "ShopPostLeft": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            -4,
+            3,
+            58
+          ],
+          "Size": [
+            1,
+            4,
+            1
+          ]
+        }
+      },
+      "ShopPostRight": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            4,
+            3,
+            58
+          ],
+          "Size": [
+            1,
+            4,
+            1
+          ]
+        }
+      },
+      "ShopRoof": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.3,
+            0.3
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            0,
+            5.5,
+            55
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "TsunamiZoneWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "CanCollide": false,
+          "Color": [
+            1,
+            0.2,
+            0.2
+          ],
+          "Transparency": 0.5,
+          "Position": [
+            -105,
+            0.3,
+            0
+          ],
+          "Size": [
+            1,
+            0.5,
+            220
+          ]
+        }
+      },
+      "TsunamiZoneEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "CanCollide": false,
+          "Color": [
+            1,
+            0.2,
+            0.2
+          ],
+          "Transparency": 0.5,
+          "Position": [
+            105,
+            0.3,
+            0
+          ],
+          "Size": [
+            1,
+            0.5,
+            220
+          ]
+        }
+      },
+      "ConveyorBelt1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -65,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -55,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -45,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -35,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt5": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -25,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt6": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -15,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt7": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            -5,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt8": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            5,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt9": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            15,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt10": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            25,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt11": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            35,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt12": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            45,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt13": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            55,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorBelt14": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "Material": "Slate",
+          "Position": [
+            65,
+            2,
+            0
+          ],
+          "Size": [
+            10,
+            1,
+            6
+          ]
+        }
+      },
+      "ConveyorRailNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.784,
+            0.235
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            0,
+            3,
+            -3.5
+          ],
+          "Size": [
+            140,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "ConveyorRailSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.784,
+            0.235
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            0,
+            3,
+            3.5
+          ],
+          "Size": [
+            140,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "ConveyorGateWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.471,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -72,
+            4,
+            0
+          ],
+          "Size": [
+            1,
+            8,
+            8
+          ]
+        }
+      },
+      "ConveyorGateEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.471,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            72,
+            4,
+            0
+          ],
+          "Size": [
+            1,
+            8,
+            8
+          ]
+        }
+      },
+      "Palm1Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            -90,
+            4,
+            -20
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm1LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -90,
+            9,
+            -20
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm1LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -88,
+            8.5,
+            -20
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm1LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -92,
+            8.5,
+            -20
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm2Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            -90,
+            4,
+            30
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm2LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -90,
+            9,
+            30
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm2LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -88,
+            8.5,
+            30
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm2LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -92,
+            8.5,
+            30
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm3Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            90,
+            4,
+            -30
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm3LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            90,
+            9,
+            -30
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm3LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            92,
+            8.5,
+            -30
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm3LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            88,
+            8.5,
+            -30
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm4Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            90,
+            4,
+            20
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm4LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            90,
+            9,
+            20
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm4LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            92,
+            8.5,
+            20
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm4LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            88,
+            8.5,
+            20
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm5Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            -40,
+            4,
+            -85
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm5LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -40,
+            9,
+            -85
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm5LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -38,
+            8.5,
+            -85
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm5LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -42,
+            8.5,
+            -85
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm6Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.549,
+            0.353,
+            0.196
+          ],
+          "Material": "Wood",
+          "Position": [
+            40,
+            4,
+            85
+          ],
+          "Size": [
+            2,
+            8,
+            2
+          ]
+        }
+      },
+      "Palm6LeafA": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            40,
+            9,
+            85
+          ],
+          "Size": [
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "Palm6LeafB": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            42,
+            8.5,
+            85
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Palm6LeafC": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Shape": "Ball",
+          "Color": [
+            0.235,
+            0.706,
+            0.314
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            38,
+            8.5,
+            85
+          ],
+          "Size": [
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "Base1Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.471,
+            0.471
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            0,
+            -55
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base1WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            2,
+            -67
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base1WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            2,
+            -43
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base1WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -72,
+            2,
+            -55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base1WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -48,
+            2,
+            -55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base2Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.471,
+            0.706,
+            1
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            0,
+            -70
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base2WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            2,
+            -82
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base2WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            2,
+            -58
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base2WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -32,
+            2,
+            -70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base2WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -8,
+            2,
+            -70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base3Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.471,
+            1,
+            0.588
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            0,
+            -70
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base3WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            2,
+            -82
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base3WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            2,
+            -58
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base3WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            8,
+            2,
+            -70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base3WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            32,
+            2,
+            -70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base4Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.863,
+            0.392
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            0,
+            -55
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base4WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            2,
+            -67
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base4WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            2,
+            -43
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base4WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            48,
+            2,
+            -55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base4WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            72,
+            2,
+            -55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base5Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.784,
+            0.51,
+            1
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            0,
+            55
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base5WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            2,
+            43
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base5WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -60,
+            2,
+            67
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base5WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -72,
+            2,
+            55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base5WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -48,
+            2,
+            55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base6Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.627,
+            0.353
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            0,
+            70
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base6WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            2,
+            58
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base6WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -20,
+            2,
+            82
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base6WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -32,
+            2,
+            70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base6WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            -8,
+            2,
+            70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base7Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.392,
+            0.902,
+            0.902
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            0,
+            70
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base7WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            2,
+            58
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base7WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            20,
+            2,
+            82
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base7WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            8,
+            2,
+            70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base7WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            32,
+            2,
+            70
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base8Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            1,
+            0.51,
+            0.784
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            0,
+            55
+          ],
+          "Size": [
+            24,
+            2,
+            24
+          ]
+        }
+      },
+      "Base8WallNorth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            2,
+            43
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base8WallSouth": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            60,
+            2,
+            67
+          ],
+          "Size": [
+            24,
+            2,
+            1
+          ]
+        }
+      },
+      "Base8WallWest": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            48,
+            2,
+            55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "Base8WallEast": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [
+            0.9,
+            0.9,
+            0.9
+          ],
+          "Material": "SmoothPlastic",
+          "Position": [
+            72,
+            2,
+            55
+          ],
+          "Size": [
+            1,
+            2,
+            24
+          ]
+        }
+      },
+      "BaseSign1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            -60,
+            8,
+            -55
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 1",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            -20,
+            8,
+            -70
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 2",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            20,
+            8,
+            -70
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 3",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            60,
+            8,
+            -55
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 4",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign5": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            -60,
+            8,
+            55
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 5",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign6": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            -20,
+            8,
+            70
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 6",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign7": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            20,
+            8,
+            70
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 7",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
+        }
+      },
+      "BaseSign8": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Transparency": 1,
+          "CanCollide": false,
+          "Position": [
+            60,
+            8,
+            55
+          ],
+          "Size": [
+            1,
+            1,
+            1
+          ]
+        },
+        "SignGui": {
+          "$className": "BillboardGui",
+          "$properties": {
+            "Size": {
+              "UDim2": [
+                [
+                  0,
+                  200
+                ],
+                [
+                  0,
+                  40
+                ]
+              ]
+            },
+            "AlwaysOnTop": true
+          },
+          "Label": {
+            "$className": "TextLabel",
+            "$properties": {
+              "Size": {
+                "UDim2": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              "BackgroundTransparency": 1,
+              "Text": "Base 8",
+              "TextColor3": [
+                1,
+                1,
+                1
+              ],
+              "TextSize": 20,
+              "Font": "SourceSansBold"
+            }
+          }
         }
       }
     },
     "Lighting": {
       "$properties": {
         "Ambient": [
-          0,
-          0,
-          0
+          0.2,
+          0.2,
+          0.2
         ],
         "Brightness": 2,
+        "ClockTime": 14,
         "GlobalShadows": true,
         "Outlines": false,
         "Technology": "Voxel"

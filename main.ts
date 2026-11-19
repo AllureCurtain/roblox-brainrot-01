@@ -1,10 +1,16 @@
-// A working roblox-brainrot-01 entry (Node 22, standard library only): the game is this directory's Rojo
-// project, built into game.rbxl with `rojo build default.project.json --output game.rbxl`, and the program
-// hands it in. It copies game.rbxl, src/, screenshots/ and PLAY.json from beside this file to /output and
-// writes /output/dossier.json, the summary the judge reads, with the vendored make.fun library. A starting
-// point, not a winner: it is a grey square that moves with the arrow keys. Build your game, rebuild
-// game.rbxl, put your PNG or JPEG screenshots in screenshots/ (the first by name is the cover, and one of
-// them is the thumbnail you upload for your game on Roblox) and fill in PLAY.json with your published place.
+// Meme Tide Tycoon — a 3D Roblox brainrot game for make.fun's roblox-brainrot-01 bounty (Node 22,
+// standard library only). The game is this directory's Rojo project, built into game.rbxl with
+// `rojo build default.project.json --output game.rbxl`, and this program hands it in. It copies
+// game.rbxl, src/, screenshots/ and PLAY.json from beside this file to /output and writes
+// /output/dossier.json, the summary the judge reads, with the vendored make.fun library.
+// The game: collect absurd meme sea creatures as they ride the conveyor, keep them on your island
+// base, and earn cash every second. Climb the rarity ladder from Soggy Sockfish to The Infinite
+// Sandwich, mutate them Golden or Rainbow, rebirth for a permanent income multiplier, and defend
+// your base with a lock — or steal from others while their lock is down. Every ~90 seconds a
+// tsunami sweeps the island: get back inside your base or be washed back to spawn.
+// Screenshots in screenshots/ are starter placeholders until the owner takes real Studio captures
+// (the first by name is the cover, and one of them is the thumbnail to upload for the game on
+// Roblox); fill in PLAY.json with the published place once the owner publishes it.
 //
 // Every name under /output starts with a letter, a digit or _ and holds only letters, digits, . _ and -: the
 // grader fails an entry whose output holds any other, so a file such as .gitkeep or .DS_Store copied in fails it.
